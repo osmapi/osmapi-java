@@ -13,10 +13,10 @@ public class Settings {
 	
 	public final static String NAME = "OSMAPIJavaClient";
 	public final static String ENCODING = "UTF-8";
-	public static final String ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL = "http://api06.dev.openstreetmap.org/api/0.6"; // DEVELOPMENT
-	public static final String DEVELOPMENT_OSM_CREDENTIALS_LOGIN = "maciej.grula@gmail.com"; // DEVELOPMENT
-	public static final String DEVELOPMENT_OSM_CREDENTIALS_PASS = "a2d5n6M3"; // DEVELOPMENT
-	//public static final String ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL = "https://api.openstreetmap.org/api/0.6"; // PRODUCTION
+	//public static final String ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL = "http://api06.dev.openstreetmap.org/api/0.6"; // DEVELOPMENT
+	public static final String DEVELOPMENT_OSM_CREDENTIALS_LOGIN = "EMAIL@EMAIL"; // DEVELOPMENT
+	public static final String DEVELOPMENT_OSM_CREDENTIALS_PASS = "PASS"; // DEVELOPMENT
+	public static final String ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL = "https://api.openstreetmap.org/api/0.6"; // PRODUCTION
 	public static final String ENDPOINT_OSM_API_V06_DEFAULT_COMMENT = "Created by OSMAPI call"; // DEVELOPMENT
 	
 }
