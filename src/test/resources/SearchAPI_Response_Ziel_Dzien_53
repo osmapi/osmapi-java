@@ -1,0 +1,38 @@
+[
+    {
+        "address": "Dziennikarska 53E Polska Zielonka ",
+        "lon": 21.166166,
+        "lat": 52.310867,
+        "type": "N"
+    },
+    {
+        "address": "Dziennikarska 53c Polska Zielonka ",
+        "lon": 21.166027,
+        "lat": 52.310585,
+        "type": "N"
+    },
+    {
+        "address": "Dziennikarska 53b Polska Zielonka ",
+        "lon": 21.16614,
+        "lat": 52.31052,
+        "type": "N"
+    },
+    {
+        "address": "Dziennikarska 53d Polska Zielonka ",
+        "lon": 21.166241,
+        "lat": 52.310661,
+        "type": "N"
+    },
+    {
+        "address": "Dziennikarska 53a Polska Zielonka ",
+        "lon": 21.16589,
+        "lat": 52.310101,
+        "type": "N"
+    },
+    {
+        "address": "Dziennikarska 53 Polska Zielonka ",
+        "lon": 21.165689,
+        "lat": 52.310326,
+        "type": "N"
+    }
+]
