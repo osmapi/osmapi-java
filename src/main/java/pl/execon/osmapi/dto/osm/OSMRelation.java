@@ -2,29 +2,46 @@ package pl.execon.osmapi.dto.osm;
 
 import java.util.List;
 
+import org.simpleframework.xml.Attribute;
+import org.simpleframework.xml.ElementList;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 public class OSMRelation {
 	@JacksonXmlProperty(isAttribute=true)
+	@Attribute(required=false)
 	private long id;
+	
+	@JsonIgnore
+	@Attribute(required=false)
+	private long uid;
+	
 	@JacksonXmlProperty(isAttribute=true)
+	@Attribute(required=false)
 	private long changeset;
 	@JacksonXmlProperty(isAttribute=true)
+	@Attribute(required=false)
 	private String timestamp;
 	@JacksonXmlProperty(isAttribute=true)
+	@Attribute(required=false)
 	private long version;
 	@JacksonXmlProperty(isAttribute=true)
+	@Attribute(required=false)
 	private boolean visible;
 	@JacksonXmlProperty(isAttribute=true)
+	@Attribute(required=false)
 	private String user;
 	
 	@JacksonXmlProperty(localName="tag")
 	@JacksonXmlElementWrapper(useWrapping=false)
+	@ElementList(inline=true, entry="tag")
 	List<OSMTag> tags;
 	
 	@JacksonXmlProperty(localName="member")
 	@JacksonXmlElementWrapper(useWrapping=false)
+	@ElementList(inline=true, entry="member")
 	List<OSMRelationMember> members;
 
 	public long getId() {
@@ -33,6 +50,16 @@ public class OSMRelation {
 
 	public void setId(long id) {
 		this.id = id;
+	}
+	
+	
+
+	public long getUid() {
+		return uid;
+	}
+
+	public void setUid(long uid) {
+		this.uid = uid;
 	}
 
 	public long getChangeset() {

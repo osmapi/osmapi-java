@@ -2,6 +2,8 @@ package pl.execon.osmapi.dto.osm;
 
 import java.util.List;
 
+import org.simpleframework.xml.ElementList;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
@@ -14,6 +16,7 @@ public class OSMChangeset {
 	
 	@JacksonXmlProperty(localName="tag")
 	@JacksonXmlElementWrapper(useWrapping=false)
+	@ElementList(inline=true, entry="nd", required=false)
 	List<OSMTag> properties;
 
 	public List<OSMTag> getProperties() {

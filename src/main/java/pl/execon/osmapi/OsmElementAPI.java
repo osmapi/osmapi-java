@@ -1,7 +1,12 @@
 package pl.execon.osmapi;
 
 import java.io.IOException;
+import java.io.StringWriter;
 import java.util.LinkedList;
+
+import org.simpleframework.xml.Serializer;
+import org.simpleframework.xml.core.Persister;
+import org.simpleframework.xml.stream.Format;
 
 import pl.execon.osmapi.dto.osm.OSMChangeset;
 import pl.execon.osmapi.dto.osm.OSMCredentials;
@@ -11,6 +16,7 @@ import pl.execon.osmapi.dto.osm.OSMRelation;
 import pl.execon.osmapi.dto.osm.OSMTag;
 import pl.execon.osmapi.dto.osm.OSMWay;
 import pl.execon.osmapi.endpoint.GenericEndpoint;
+import pl.execon.osmapi.util.EncodeDecoderUtils;
 import pl.execon.osmapi.util.Settings;
 
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
@@ -253,17 +259,22 @@ public class OsmElementAPI {
 			osmElement.getRelation().setChangeset(osmChangeset.getId());
 		
 				
-		XmlMapper xmlMapper = new XmlMapper();
-		xmlMapper.setSerializationInclusion(Include.NON_NULL);
-		xmlMapper.configure(ToXmlGenerator.Feature.WRITE_XML_DECLARATION, true);
+//		XmlMapper xmlMapper = new XmlMapper();
+//		xmlMapper.setSerializationInclusion(Include.NON_NULL);
+//		xmlMapper.configure(ToXmlGenerator.Feature.WRITE_XML_DECLARATION, true);
 		
 		String requestBody = null;
-		try {
-			//xmlMapper.writeValue(System.out, osmElement);
-			requestBody = xmlMapper.writeValueAsString(osmElement);
-		} catch (IOException e) {
-			System.err.println("Error while serializing element: "+e.getMessage());
-		}
+//		try {
+//			//xmlMapper.writeValue(System.out, osmElement);
+//			requestBody = xmlMapper.writeValueAsString(osmElement);
+//		} catch (IOException e) {
+//			System.err.println("Error while serializing element: "+e.getMessage());
+//		}
+		
+		
+		requestBody = EncodeDecoderUtils.toXML(osmElement);
+		
+
 		
 		String textResponse = null;
 		if(requestBody!=null){
@@ -296,18 +307,19 @@ public class OsmElementAPI {
 		
 		OSMElement result = null;
 		
-		XmlMapper xmlMapper = new XmlMapper();
-		xmlMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES , false);
-		
-		
-		try {
-			if(xmlResponse!=null && !xmlResponse.isEmpty()){
-				result =  xmlMapper.readValue(xmlResponse, OSMElement.class);
-			}
-		} catch (IOException e) {
-			System.err.println("Error getting way: "+id+" due to:"+e.getMessage());
-		}
-		
+//		XmlMapper xmlMapper = new XmlMapper();
+//		xmlMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES , false);
+//		
+//		
+//		try {
+//			if(xmlResponse!=null && !xmlResponse.isEmpty()){
+//				result =  xmlMapper.readValue(xmlResponse, OSMElement.class);
+//			}
+//		} catch (IOException e) {
+//			System.err.println("Error getting way: "+id+" due to:"+e.getMessage());
+//		}
+
+		result = EncodeDecoderUtils.fromXML(xmlResponse);
 		return result;
 	}
 	
@@ -336,17 +348,21 @@ public class OsmElementAPI {
 			osmElement.getRelation().setChangeset(osmChangeset.getId());
 		
 				
-		XmlMapper xmlMapper = new XmlMapper();
-		xmlMapper.setSerializationInclusion(Include.NON_NULL);
-		xmlMapper.configure(ToXmlGenerator.Feature.WRITE_XML_DECLARATION, true);
+//		XmlMapper xmlMapper = new XmlMapper();
+//		xmlMapper.setSerializationInclusion(Include.NON_NULL);
+//		xmlMapper.configure(ToXmlGenerator.Feature.WRITE_XML_DECLARATION, true);
+//		
+//		String requestBody = null;
+//		try {
+//			//xmlMapper.writeValue(System.out, osmElement);
+//			requestBody = xmlMapper.writeValueAsString(osmElement);
+//		} catch (IOException e) {
+//			System.err.println("Error while serializing element: "+e.getMessage());
+//		}
 		
 		String requestBody = null;
-		try {
-			//xmlMapper.writeValue(System.out, osmElement);
-			requestBody = xmlMapper.writeValueAsString(osmElement);
-		} catch (IOException e) {
-			System.err.println("Error while serializing element: "+e.getMessage());
-		}
+		requestBody = EncodeDecoderUtils.toXML(osmElement);
+
 		
 		String textResponse = null;
 		if(requestBody!=null){
@@ -396,17 +412,20 @@ public class OsmElementAPI {
 		changeset.setProperties(properties);
 		osmElement.setChangeset(changeset);
 		
-		XmlMapper xmlMapper = new XmlMapper();
-		xmlMapper.setSerializationInclusion(Include.NON_NULL);
-		xmlMapper.configure(ToXmlGenerator.Feature.WRITE_XML_DECLARATION, true);
+//		XmlMapper xmlMapper = new XmlMapper();
+//		xmlMapper.setSerializationInclusion(Include.NON_NULL);
+//		xmlMapper.configure(ToXmlGenerator.Feature.WRITE_XML_DECLARATION, true);
+//		
+//		String requestBody = null;
+//		try {
+//			//xmlMapper.writeValue(System.out, osmElement);
+//			requestBody = xmlMapper.writeValueAsString(osmElement);
+//		} catch (IOException e) {
+//			System.err.println("Error while serializing changeset: "+e.getMessage());
+//		}
 		
 		String requestBody = null;
-		try {
-			//xmlMapper.writeValue(System.out, osmElement);
-			requestBody = xmlMapper.writeValueAsString(osmElement);
-		} catch (IOException e) {
-			System.err.println("Error while serializing changeset: "+e.getMessage());
-		}
+		requestBody = EncodeDecoderUtils.toXML(osmElement);
 		
 		String url = Settings.ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL;
 		url += "/changeset/create";
