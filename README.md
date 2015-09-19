@@ -6,11 +6,11 @@ The API may be used in java applications as well as with Android apps.
 # Documentation
 See the Wiki's [API documentation](https://github.com/alkeicam/osmapi-java/wiki/Java-API)
 
-# Android dependencies
-For use with Android based apps please use following dependencies:
+# Android installation
+For use with Android based apps please download [java-osmapi-1.0.0-RELEASE.jar] (https://github.com/alkeicam/osmapi-java/releases/download/v1.0.1/java-osmapi-1.0.0-RELEASE.jar) and add following Gradle dependencies:
 
 ```ruby
-compile 'com.google.code.gson:gson:2.3.1'
+	compile 'com.google.code.gson:gson:2.3.1'
     compile group: 'org.apache.httpcomponents' , name: 'httpclient-android' , version: '4.3.5.1'
     compile('org.simpleframework:simple-xml:2.7.+'){
         exclude module: 'stax'
