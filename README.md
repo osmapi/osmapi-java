@@ -7,7 +7,7 @@ The API may be used in java applications as well as with Android apps.
 See the Wiki's [API documentation](https://github.com/alkeicam/osmapi-java/wiki/Java-API)
 
 #Java installation
-Please download [](https://github.com/osmapi/osmapi-java/releases/download/v1.0.1/java-osmapi-1.0.0-RELEASE.jar) into your project libs folder and add following pom dependencies:
+Please download [java-osmapi-1.0.0-RELEASE.jar](https://github.com/osmapi/osmapi-java/releases/download/v1.0.1/java-osmapi-1.0.0-RELEASE.jar) into your project libs folder and add following pom dependencies:
 
 ```ruby
 		<dependency>
