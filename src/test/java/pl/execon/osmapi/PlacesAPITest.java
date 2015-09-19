@@ -1,36 +1,27 @@
 package pl.execon.osmapi;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.when;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Locale;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
-import static org.junit.Assert.*;
-
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import pl.execon.osmapi.QueryFactory;
-import pl.execon.osmapi.RoutingAPI;
-import pl.execon.osmapi.SearchAPI;
 import pl.execon.osmapi.dto.Feature;
 import pl.execon.osmapi.dto.FeatureCollection;
 import pl.execon.osmapi.dto.FeatureImage;
 import pl.execon.osmapi.dto.PlacesAPIQuery;
-import pl.execon.osmapi.dto.RoutingAPIPath;
-import pl.execon.osmapi.dto.RoutingAPIQuery;
-import pl.execon.osmapi.dto.RoutingAPIRawResponse;
-import pl.execon.osmapi.dto.SearchAPIPlace;
-import pl.execon.osmapi.dto.SearchAPIPlaceType;
-import pl.execon.osmapi.dto.SearchAPIQuery;
 import pl.execon.osmapi.endpoint.GenericEndpoint;
 import pl.execon.osmapi.util.Settings;
 

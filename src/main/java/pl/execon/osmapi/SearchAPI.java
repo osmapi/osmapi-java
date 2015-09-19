@@ -2,15 +2,13 @@ package pl.execon.osmapi;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.util.LinkedList;
-import java.util.List;
-
-import com.google.gson.Gson;
 
 import pl.execon.osmapi.dto.SearchAPIPlace;
 import pl.execon.osmapi.dto.SearchAPIQuery;
 import pl.execon.osmapi.endpoint.GenericEndpoint;
 import pl.execon.osmapi.util.Settings;
+
+import com.google.gson.Gson;
 
 public class SearchAPI {
 	

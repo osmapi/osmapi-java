@@ -3,7 +3,7 @@ package pl.execon.osmapi.dto.osm;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;
 
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+
 
 /**
  * Wrapper object for OSM data manipulation. Contains one of: node, way, relation.
@@ -46,7 +46,7 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
  * @author grulka
  *
  */
-@JacksonXmlRootElement(localName="osm")
+
 @Root(name="osm",strict=false)
 public class OSMElement {
 	@Element(required=false)

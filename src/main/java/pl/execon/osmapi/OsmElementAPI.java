@@ -1,12 +1,6 @@
 package pl.execon.osmapi;
 
-import java.io.IOException;
-import java.io.StringWriter;
 import java.util.LinkedList;
-
-import org.simpleframework.xml.Serializer;
-import org.simpleframework.xml.core.Persister;
-import org.simpleframework.xml.stream.Format;
 
 import pl.execon.osmapi.dto.osm.OSMChangeset;
 import pl.execon.osmapi.dto.osm.OSMCredentials;
@@ -19,10 +13,6 @@ import pl.execon.osmapi.endpoint.GenericEndpoint;
 import pl.execon.osmapi.util.EncodeDecoderUtils;
 import pl.execon.osmapi.util.Settings;
 
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import com.fasterxml.jackson.dataformat.xml.ser.ToXmlGenerator;
 
 public class OsmElementAPI {
 
@@ -85,11 +75,11 @@ public class OsmElementAPI {
 		url += "/node/"+node.getId();		
 		OSMElement osmElement = new OSMElement();
 		osmElement.setNode(node);
-		updateElement(osmElement, url, osmChangeset, osmCredentials);
+		osmElement = updateElement(osmElement, url, osmChangeset, osmCredentials);
 		
 		closeChangeset(osmChangeset, osmCredentials);
 		
-		return node;
+		return osmElement.getNode();
 	}
 	
 	/**
@@ -150,11 +140,11 @@ public class OsmElementAPI {
 		url += "/way/"+way.getId();		
 		OSMElement osmElement = new OSMElement();
 		osmElement.setWay(way);
-		updateElement(osmElement, url, osmChangeset, osmCredentials);
+		osmElement = updateElement(osmElement, url, osmChangeset, osmCredentials);
 		
 		closeChangeset(osmChangeset, osmCredentials);
 		
-		return way;
+		return osmElement.getWay();
 	};
 	
 	/**
@@ -215,11 +205,11 @@ public class OsmElementAPI {
 		url += "/relation/"+relation.getId();		
 		OSMElement osmElement = new OSMElement();
 		osmElement.setRelation(relation);
-		updateElement(osmElement, url, osmChangeset, osmCredentials);
+		osmElement = updateElement(osmElement, url, osmChangeset, osmCredentials);
 		
 		closeChangeset(osmChangeset, osmCredentials);
 		
-		return relation;
+		return osmElement.getRelation();
 	}
 		
 	
@@ -283,12 +273,20 @@ public class OsmElementAPI {
 		
 		if(textResponse!=null){
 			createdId = Long.valueOf(textResponse);
-			if(osmElement.getNode()!=null)
+			if(osmElement.getNode()!=null){
 				osmElement.getNode().setId(createdId);
-			if(osmElement.getWay()!=null)
+				osmElement.setNode(getNode(createdId));
+			}
+			if(osmElement.getWay()!=null){
 				osmElement.getWay().setId(createdId);
-			if(osmElement.getRelation()!=null)
+				osmElement.setWay(getWay(createdId));
+			}
+			if(osmElement.getRelation()!=null){
 				osmElement.getRelation().setId(createdId);
+				osmElement.setRelation(getRelation(createdId));
+			}
+			
+			
 			
 			return osmElement;
 		}
@@ -371,12 +369,18 @@ public class OsmElementAPI {
 		
 		if(textResponse!=null){
 			versionNumber = Long.valueOf(textResponse);
-			if(osmElement.getNode()!=null)
-				osmElement.getNode().setVersion(versionNumber);
-			if(osmElement.getWay()!=null)
-				osmElement.getWay().setVersion(versionNumber);
-			if(osmElement.getRelation()!=null)
-				osmElement.getRelation().setVersion(versionNumber);
+			if(osmElement.getNode()!=null){
+				osmElement.setNode(getNode(osmElement.getNode().getId()));
+			}
+				//osmElement.getNode().setVersion(versionNumber);
+			if(osmElement.getWay()!=null){
+				osmElement.setWay(getWay(osmElement.getWay().getId()));
+			}
+				//osmElement.getWay().setVersion(versionNumber);
+			if(osmElement.getRelation()!=null){
+				osmElement.setRelation(getRelation(osmElement.getRelation().getId()));
+			}
+				//osmElement.getRelation().setVersion(versionNumber);
 		}
 		return osmElement;
 	};

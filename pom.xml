@@ -16,6 +16,7 @@
 		<gson.version>2.3.1</gson.version>
 		<junit.version>4.8.1</junit.version>
 		<mockito.version>1.8.4</mockito.version>
+		<simplexml.version>2.7.1</simplexml.version>
   </properties>
   
   
@@ -47,22 +48,11 @@
 		</dependency>
 		
 		<!-- XML to POJO -->
-		<dependency>
-			<groupId>com.fasterxml.jackson.dataformat</groupId>
-			<artifactId>jackson-dataformat-xml</artifactId>
-			<version>2.5.3</version>
-		</dependency>
 		
 		<dependency>
 			<groupId>org.simpleframework</groupId>
 			<artifactId>simple-xml</artifactId>
-			<version>2.7.1</version>
-		</dependency>
-		<!-- fix for strange STAX serialization behaviour -->
-		<dependency>
-		  <groupId>org.codehaus.woodstox</groupId>
-		  <artifactId>woodstox-core-asl</artifactId>
-		  <version>4.1.4</version>
+			<version>${simplexml.version}</version>
 		</dependency>
 		        	
 	</dependencies>

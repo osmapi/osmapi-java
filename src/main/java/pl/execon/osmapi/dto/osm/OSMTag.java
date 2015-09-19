@@ -2,16 +2,14 @@ package pl.execon.osmapi.dto.osm;
 
 import org.simpleframework.xml.Attribute;
 
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+
 
 
 public class OSMTag {
 	
-	@JacksonXmlProperty(isAttribute=true)
 	@Attribute
 	private String k;
 	
-	@JacksonXmlProperty(isAttribute=true)
 	@Attribute
 	private String v;
 	
