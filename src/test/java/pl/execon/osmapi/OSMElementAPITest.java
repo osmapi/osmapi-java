@@ -28,7 +28,8 @@ import pl.execon.osmapi.dto.osm.OSMRelationMember;
 import pl.execon.osmapi.dto.osm.OSMTag;
 import pl.execon.osmapi.dto.osm.OSMWay;
 import pl.execon.osmapi.endpoint.GenericEndpoint;
-import pl.execon.osmapi.util.Settings;
+import pl.execon.osmapi.util.Preferences;
+
 
 @RunWith(MockitoJUnitRunner.class)
 public class OSMElementAPITest {
@@ -46,11 +47,11 @@ public class OSMElementAPITest {
 	public void setUp() throws IOException, URISyntaxException{
 		String response_1 = new String(Files.readAllBytes(Paths.get(getClass().getResource("/OsmElementAPI_Response_1").toURI())));		
 		
-		when(endpoint.requestURL(Settings.ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL+"/node/803223")).thenReturn(response_1);
+		when(endpoint.requestURL(Preferences.ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL+"/node/803223")).thenReturn(response_1);
 		
-		when(endpoint.requestURLWithBasicAuth(Matchers.eq("https://"+Settings.ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL+"/node/803223"),Matchers.anyString(), Matchers.anyString())).thenReturn(response_1);
+		when(endpoint.requestURLWithBasicAuth(Matchers.eq("https://"+Preferences.ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL+"/node/803223"),Matchers.anyString(), Matchers.anyString())).thenReturn(response_1);
 				
-		osmCredentials = new OSMCredentials(Settings.DEVELOPMENT_OSM_CREDENTIALS_LOGIN, Settings.DEVELOPMENT_OSM_CREDENTIALS_PASS);
+		osmCredentials = new OSMCredentials(Preferences.DEVELOPMENT_OSM_CREDENTIALS_LOGIN, Preferences.DEVELOPMENT_OSM_CREDENTIALS_PASS);
 		
 	}
 	

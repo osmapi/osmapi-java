@@ -1,6 +1,6 @@
 package pl.execon.osmapi.util;
 
-public class Settings {
+public class Preferences {
 	public final static String VERSION = "v1.0";
 	public final static String ENDPOINT_SEARCH_API_BASE_URL = "osmapi.execon.pl/search/address";
 	public final static String ENDPOINT_ROUTING_API_BASE_URL = "osmapi.execon.pl/routing/viaroute";

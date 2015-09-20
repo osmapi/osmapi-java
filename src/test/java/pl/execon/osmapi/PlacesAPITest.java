@@ -23,7 +23,8 @@ import pl.execon.osmapi.dto.FeatureCollection;
 import pl.execon.osmapi.dto.FeatureImage;
 import pl.execon.osmapi.dto.PlacesAPIQuery;
 import pl.execon.osmapi.endpoint.GenericEndpoint;
-import pl.execon.osmapi.util.Settings;
+import pl.execon.osmapi.util.Preferences;
+
 
 @RunWith(MockitoJUnitRunner.class)
 public class PlacesAPITest {
@@ -43,9 +44,9 @@ public class PlacesAPITest {
 		
 		byte[] place3_Response = Files.readAllBytes(Paths.get(getClass().getResource("/PlacesAPI_Response_3.png").toURI()));
 		
-		when(endpoint.requestURL("http://"+Settings.ENDPOINT_PLACES_API_BASE_URL+"?query=53.22054,21.87315")).thenReturn(place1_Response);
-		when(endpoint.requestURL("http://"+Settings.ENDPOINT_PLACES_API_BASE_URL+"/box?l=52.22733,21.00427&u=52.22815,21.00539")).thenReturn(place2_Response);
-		when(endpoint.downloadURL("http://"+Settings.ENDPOINT_WEBSNAP_API_BASE_URL+"?u=P&w=300&h=225")).thenReturn(place3_Response);
+		when(endpoint.requestURL("http://"+Preferences.ENDPOINT_PLACES_API_BASE_URL+"?query=53.22054,21.87315")).thenReturn(place1_Response);
+		when(endpoint.requestURL("http://"+Preferences.ENDPOINT_PLACES_API_BASE_URL+"/box?l=52.22733,21.00427&u=52.22815,21.00539")).thenReturn(place2_Response);
+		when(endpoint.downloadURL("http://"+Preferences.ENDPOINT_WEBSNAP_API_BASE_URL+"?u=P&w=300&h=225")).thenReturn(place3_Response);
 		
 	}
 	

@@ -11,7 +11,8 @@ import pl.execon.osmapi.dto.osm.OSMTag;
 import pl.execon.osmapi.dto.osm.OSMWay;
 import pl.execon.osmapi.endpoint.GenericEndpoint;
 import pl.execon.osmapi.util.EncodeDecoderUtils;
-import pl.execon.osmapi.util.Settings;
+import pl.execon.osmapi.util.Preferences;
+
 
 
 public class OsmElementAPI {
@@ -33,7 +34,7 @@ public class OsmElementAPI {
 		
 		OSMChangeset osmChangeset = createChangeset(comment, osmCredentials);
 		
-		String url = Settings.ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL;
+		String url = Preferences.ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL;
 		url += "/node/create";		
 		OSMElement osmElement = new OSMElement();
 		osmElement.setNode(node);
@@ -51,7 +52,7 @@ public class OsmElementAPI {
 	 */
 	public OSMNode getNode(long id){
 		OSMNode result = null;
-		String url = Settings.ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL;
+		String url = Preferences.ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL;
 		url += "/node/"+id;		
 		OSMElement element =  getElement(id, url);
 		if(element!=null)
@@ -71,7 +72,7 @@ public class OsmElementAPI {
 	public OSMNode updateNode(OSMNode node,String comment, OSMCredentials osmCredentials){
 		OSMChangeset osmChangeset = createChangeset(comment, osmCredentials);
 		
-		String url = Settings.ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL;
+		String url = Preferences.ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL;
 		url += "/node/"+node.getId();		
 		OSMElement osmElement = new OSMElement();
 		osmElement.setNode(node);
@@ -94,7 +95,7 @@ public class OsmElementAPI {
 		
 		OSMChangeset osmChangeset = createChangeset(comment, osmCredentials);
 		
-		String url = Settings.ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL;
+		String url = Preferences.ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL;
 		url += "/way/create";		
 		OSMElement osmElement = new OSMElement();
 		osmElement.setWay(way);
@@ -115,7 +116,7 @@ public class OsmElementAPI {
 	 */
 	public OSMWay getWay(long id){
 		OSMWay result = null;
-		String url = Settings.ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL;
+		String url = Preferences.ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL;
 		url += "/way/"+id;		
 		OSMElement element = getElement(id, url);
 		if(element != null)
@@ -136,7 +137,7 @@ public class OsmElementAPI {
 		
 		OSMChangeset osmChangeset = createChangeset("", osmCredentials);
 		
-		String url = Settings.ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL;
+		String url = Preferences.ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL;
 		url += "/way/"+way.getId();		
 		OSMElement osmElement = new OSMElement();
 		osmElement.setWay(way);
@@ -159,7 +160,7 @@ public class OsmElementAPI {
 		
 		OSMChangeset osmChangeset = createChangeset(comment, osmCredentials);
 		
-		String url = Settings.ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL;
+		String url = Preferences.ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL;
 		url += "/relation/create";		
 		OSMElement osmElement = new OSMElement();
 		osmElement.setRelation(relation);
@@ -180,7 +181,7 @@ public class OsmElementAPI {
 	 */
 	public OSMRelation getRelation(long id){
 		OSMRelation result = null;
-		String url = Settings.ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL;
+		String url = Preferences.ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL;
 		url += "/relation/"+id;		
 		OSMElement element = getElement(id, url);
 		if(element != null)
@@ -201,7 +202,7 @@ public class OsmElementAPI {
 		
 		OSMChangeset osmChangeset = createChangeset("", osmCredentials);
 		
-		String url = Settings.ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL;
+		String url = Preferences.ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL;
 		url += "/relation/"+relation.getId();		
 		OSMElement osmElement = new OSMElement();
 		osmElement.setRelation(relation);
@@ -221,7 +222,7 @@ public class OsmElementAPI {
 	protected void closeChangeset(OSMChangeset osmChangeset, OSMCredentials osmCredentials) {
 		if(osmChangeset==null||osmCredentials==null)
 			return;
-		String url = Settings.ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL;
+		String url = Preferences.ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL;
 		url += "/changeset/"+osmChangeset.getId()+"/close";
 		
 		endpoint.requestURLWithPUTWithBasicAuth(url, osmCredentials.getLogin(), osmCredentials.getPassword());
@@ -404,9 +405,9 @@ public class OsmElementAPI {
 		OSMTag commentTag = null;
 		
 		if(comment==null||comment.isEmpty()){
-			commentTag = new OSMTag("comment", Settings.ENDPOINT_OSM_API_V06_DEFAULT_COMMENT);
+			commentTag = new OSMTag("comment", Preferences.ENDPOINT_OSM_API_V06_DEFAULT_COMMENT);
 		}else{
-			commentTag = new OSMTag("comment", Settings.ENDPOINT_OSM_API_V06_DEFAULT_COMMENT);
+			commentTag = new OSMTag("comment", Preferences.ENDPOINT_OSM_API_V06_DEFAULT_COMMENT);
 		}
 		
 		LinkedList<OSMTag> properties = new LinkedList<OSMTag>();
@@ -431,7 +432,7 @@ public class OsmElementAPI {
 		String requestBody = null;
 		requestBody = EncodeDecoderUtils.toXML(osmElement);
 		
-		String url = Settings.ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL;
+		String url = Preferences.ENDPOINT_OSM_API_V06_ELEMENT_BASE_URL;
 		url += "/changeset/create";
 		
 		String response = null;

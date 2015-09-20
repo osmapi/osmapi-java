@@ -8,7 +8,8 @@ import pl.execon.osmapi.dto.FeatureImage;
 import pl.execon.osmapi.dto.Geometry;
 import pl.execon.osmapi.dto.PlacesAPIQuery;
 import pl.execon.osmapi.endpoint.GenericEndpoint;
-import pl.execon.osmapi.util.Settings;
+import pl.execon.osmapi.util.Preferences;
+
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -43,7 +44,7 @@ public class PlacesAPI {
 	 * @return list of geojson features matching given place provided in query
 	 */
 	public FeatureCollection queryPlace(PlacesAPIQuery query){
-		String url = "http://"+Settings.ENDPOINT_PLACES_API_BASE_URL;
+		String url = "http://"+Preferences.ENDPOINT_PLACES_API_BASE_URL;
 						
 		if(query.getBoundingBox()!=null){
 			url += "/box?";
@@ -78,18 +79,18 @@ public class PlacesAPI {
 			return featureImage;
 		}
 		
-		String url = "http://"+Settings.ENDPOINT_WEBSNAP_API_BASE_URL;
+		String url = "http://"+Preferences.ENDPOINT_WEBSNAP_API_BASE_URL;
 		url += "?u="+feature.getProperties().getDetailsLink();
-		url += "&w="+Settings.WEBSNAP_DEFAULT_WIDTH;
-		url += "&h="+Settings.WEBSNAP_DEFAULT_HEIGHT;
+		url += "&w="+Preferences.WEBSNAP_DEFAULT_WIDTH;
+		url += "&h="+Preferences.WEBSNAP_DEFAULT_HEIGHT;
 		
 		byte[] image = endpoint.downloadURL(url);
 		if(image!=null){
 			featureImage = new FeatureImage();
 			
-			featureImage.setWidth(Settings.WEBSNAP_DEFAULT_WIDTH);
-			featureImage.setHeight(Settings.WEBSNAP_DEFAULT_HEIGHT);
-			featureImage.setContentType(Settings.WEBSNAP_DEFAULT_CONTENT_TYPE);
+			featureImage.setWidth(Preferences.WEBSNAP_DEFAULT_WIDTH);
+			featureImage.setHeight(Preferences.WEBSNAP_DEFAULT_HEIGHT);
+			featureImage.setContentType(Preferences.WEBSNAP_DEFAULT_CONTENT_TYPE);
 			featureImage.setImageBytes(image);
 		}
 		

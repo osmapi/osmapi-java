@@ -6,7 +6,8 @@ import java.net.URLEncoder;
 import pl.execon.osmapi.dto.SearchAPIPlace;
 import pl.execon.osmapi.dto.SearchAPIQuery;
 import pl.execon.osmapi.endpoint.GenericEndpoint;
-import pl.execon.osmapi.util.Settings;
+import pl.execon.osmapi.util.Preferences;
+
 
 import com.google.gson.Gson;
 
@@ -29,13 +30,13 @@ public class SearchAPI {
 		if(query.getSearchString()!=null){
 			try {
 				queryPart += "query=";
-				queryPart += URLEncoder.encode(query.getSearchString(),Settings.ENCODING);
+				queryPart += URLEncoder.encode(query.getSearchString(),Preferences.ENCODING);
 			} catch (UnsupportedEncodingException e) {	
 				System.err.println("Error finding address due to:"+e.getMessage());				
 			}
 		}
 		
-		String url = "http://"+Settings.ENDPOINT_SEARCH_API_BASE_URL+"?"+queryPart;
+		String url = "http://"+Preferences.ENDPOINT_SEARCH_API_BASE_URL+"?"+queryPart;
 		
 		String response = endpoint.requestURL(url);
 		SearchAPIPlace[] result = new Gson().fromJson(response, SearchAPIPlace[].class);

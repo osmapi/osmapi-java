@@ -13,7 +13,8 @@ import pl.execon.osmapi.dto.RoutingAPIQuery;
 import pl.execon.osmapi.dto.RoutingAPIRawResponse;
 import pl.execon.osmapi.endpoint.GenericEndpoint;
 import pl.execon.osmapi.util.EncodedPolylineDecoder;
-import pl.execon.osmapi.util.Settings;
+import pl.execon.osmapi.util.Preferences;
+
 
 import com.google.gson.Gson;
 
@@ -206,7 +207,7 @@ public class RoutingAPI {
 			queryPart += "&instructions=true";
 		}
 		
-		String url = "http://"+Settings.ENDPOINT_ROUTING_API_BASE_URL+"?"+queryPart;
+		String url = "http://"+Preferences.ENDPOINT_ROUTING_API_BASE_URL+"?"+queryPart;
 		
 		String response = endpoint.requestURL(url);
 					

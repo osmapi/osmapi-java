@@ -15,7 +15,8 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 
-import pl.execon.osmapi.util.Settings;
+import pl.execon.osmapi.util.Preferences;
+
 
 public class GenericEndpoint {
 	
@@ -46,14 +47,14 @@ public class GenericEndpoint {
 	
 	private String requestURLInternal(String url, HttpClient client){
 		HttpGet request = new HttpGet(url);
-		request.addHeader("User-Agent", Settings.NAME+"_"+Settings.VERSION);
+		request.addHeader("User-Agent", Preferences.NAME+"_"+Preferences.VERSION);
 
 		String result = null;
 		
 		try {
 			HttpResponse response = client.execute(request);
 			if(response.getEntity()!=null)
-				result = EntityUtils.toString(response.getEntity(), Settings.ENCODING);			
+				result = EntityUtils.toString(response.getEntity(), Preferences.ENCODING);			
 		} catch (IOException e) {
 			System.err.println("Error requesting URL: "+url+" due to:"+e.getMessage());
 		}		
@@ -95,13 +96,13 @@ public class GenericEndpoint {
 		String result = null;		
 		try {
 			HttpPut request = new HttpPut(url);
-			request.addHeader("User-Agent", Settings.NAME+"_"+Settings.VERSION);
+			request.addHeader("User-Agent", Preferences.NAME+"_"+Preferences.VERSION);
 			if(body!=null){
 				request.setEntity(new StringEntity(body));
 			}
 			HttpResponse response = client.execute(request);
 			if(response.getEntity()!=null&&response.getStatusLine().getStatusCode()==200)
-				result = EntityUtils.toString(response.getEntity(), Settings.ENCODING);			
+				result = EntityUtils.toString(response.getEntity(), Preferences.ENCODING);			
 		} catch (IOException e) {
 			System.err.println("Error requesting URL: "+url+" due to:"+e.getMessage());
 		}		
@@ -117,7 +118,7 @@ public class GenericEndpoint {
 		HttpClient client = new DefaultHttpClient();
 		
 		HttpGet request = new HttpGet(url);
-		request.addHeader("User-Agent", Settings.NAME+"_"+Settings.VERSION);
+		request.addHeader("User-Agent", Preferences.NAME+"_"+Preferences.VERSION);
 		
 		byte[] result = null;
 		
