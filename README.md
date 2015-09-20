@@ -35,7 +35,24 @@ FeatureCollection results = placesAPI.queryPlace(query);
 FeatureImage image = placesAPI.imageForFeature(results.getFeatures()[0]);
 ```
 
+To work with OSM nodes in OSM database use:
+```java
+// get node
+OSMNode result = osmElementAPI.getNode(803223);
+(...)
 
+// create node
+OSMNode node = new OSMNode();
+node.setLon(23.50);
+node.setLat(53.21);
+node.setVisible(true);
+OSMNode result = osmElementAPI.createNode(node, "adding node", osmCredentials);
+
+// modify node (be carefull !)
+OSMNode result = osmElementAPIOnline.getNode(803223);
+(... change node properties ...)		
+OSMNode updatedNode = osmElementAPI.updateNode(result,"updating node", osmCredentials);
+```
 # Documentation
 See the Wiki's [API documentation](https://github.com/osmapi/osmapi-java/wiki/Java-API)
 
