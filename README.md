@@ -49,7 +49,7 @@ node.setVisible(true);
 OSMNode result = osmElementAPI.createNode(node, "adding node", osmCredentials);
 
 // modify node (be carefull !)
-OSMNode result = osmElementAPIOnline.getNode(803223);
+OSMNode result = osmElementAPI.getNode(803223);
 (... change node properties ...)		
 OSMNode updatedNode = osmElementAPI.updateNode(result,"updating node", osmCredentials);
 ```
