@@ -1,8 +1,9 @@
 package pl.execon.osmapi.util;
 
 public class Preferences {
-	public final static String VERSION = "v1.0";
-	public final static String ENDPOINT_SEARCH_API_BASE_URL = "osmapi.execon.pl/search/address";
+	public final static String VERSION = "v1.2";
+	public final static String ENDPOINT_BASE_URL = "osmapi.execon.pl";
+	public final static String ENDPOINT_SEARCH_API_BASE_URL = "/search/address";
 	public final static String ENDPOINT_ROUTING_API_BASE_URL = "osmapi.execon.pl/routing/viaroute";
 	public final static String ENDPOINT_PLACES_API_BASE_URL = "osmapi.execon.pl:8085/places";
 	public final static String ENDPOINT_WEBSNAP_API_BASE_URL = "websnap.execon.pl/c.php";

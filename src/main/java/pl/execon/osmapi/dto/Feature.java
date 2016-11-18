@@ -23,6 +23,12 @@ public class Feature {
 	public void setProperties(Properties properties) {
 		this.properties = properties;
 	}
+	@Override
+	public String toString() {
+		return "Feature [" + (type != null ? "type=" + type + ", " : "")
+				+ (geometry != null ? "geometry=" + geometry + ", " : "")
+				+ (properties != null ? "properties=" + properties : "") + "]";
+	}
 	
 	
 }

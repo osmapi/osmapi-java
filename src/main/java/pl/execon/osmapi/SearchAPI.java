@@ -3,28 +3,37 @@ package pl.execon.osmapi;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
+import pl.execon.osmapi.dto.FeatureCollection;
+import pl.execon.osmapi.dto.Geometry;
 import pl.execon.osmapi.dto.SearchAPIPlace;
 import pl.execon.osmapi.dto.SearchAPIQuery;
 import pl.execon.osmapi.endpoint.GenericEndpoint;
+import pl.execon.osmapi.util.GeometryDeserializer;
 import pl.execon.osmapi.util.Preferences;
 
-
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 public class SearchAPI {
+	private Boolean useHTTPS;
 	
 	private GenericEndpoint endpoint;	
-	public SearchAPI(){
+	
+	public SearchAPI(Boolean useHTTPS){
 		endpoint = new GenericEndpoint();
+		this.useHTTPS = useHTTPS;
 	}
 	
 	/**
 	 * Finds addresses matching given query 
 	 * @param query
-	 * @return
+	 * @return result or null 
 	 */
-	public SearchAPIPlace[] findAddress(SearchAPIQuery query){
-				
+	public FeatureCollection findAddress(SearchAPIQuery query){
+		FeatureCollection result = null;
+		
+		String servicePath = Preferences.ENDPOINT_SEARCH_API_BASE_URL;
+		
 		String queryPart = "";
 		
 		if(query.getSearchString()!=null){
@@ -35,11 +44,18 @@ public class SearchAPI {
 				System.err.println("Error finding address due to:"+e.getMessage());				
 			}
 		}
+		servicePath+="?";
+		servicePath+=queryPart;
 		
-		String url = "http://"+Preferences.ENDPOINT_SEARCH_API_BASE_URL+"?"+queryPart;
+		String url = GenericEndpoint.generateURL(servicePath, useHTTPS);
 		
 		String response = endpoint.requestURL(url);
-		SearchAPIPlace[] result = new Gson().fromJson(response, SearchAPIPlace[].class);
+		
+		if(response!=null){
+			Gson gson = new GsonBuilder().registerTypeAdapter(Geometry.class, new GeometryDeserializer()).create();
+			result = gson.fromJson(response, FeatureCollection.class);
+		}
+		
 		
 		return result;
 	}

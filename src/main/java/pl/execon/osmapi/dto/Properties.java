@@ -4,6 +4,8 @@ public class Properties {
 	private String detailsLink;
 	private String name;
 	private String matchType;
+	private String type;
+	private Long externalId;
 	
 	public String getDetailsLink() {
 		return detailsLink;
@@ -23,6 +25,19 @@ public class Properties {
 	public void setMatchType(String matchType) {
 		this.matchType = matchType;
 	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public Long getExternalId() {
+		return externalId;
+	}
+	public void setExternalId(Long externalId) {
+		this.externalId = externalId;
+	}
+	
 	
 	
 }

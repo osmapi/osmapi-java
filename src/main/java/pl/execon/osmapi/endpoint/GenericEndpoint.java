@@ -20,6 +20,26 @@ import pl.execon.osmapi.util.Preferences;
 
 public class GenericEndpoint {
 	
+	private final static String HTTP = "http://";
+	private final static String HTTPS = "https://";
+	
+	/**
+	 * Adds base URL and handles protocol selection.
+	 * @param servicePath relative path to service i.e. /search?query=asdasdasd
+	 * @param useHTTPS
+	 * @return
+	 */
+	public static String generateURL(String servicePath, Boolean useHTTPS){
+		String resultURL = HTTP;
+		if(useHTTPS){
+			resultURL = HTTPS;
+		}
+		resultURL+=Preferences.ENDPOINT_BASE_URL;
+		resultURL+=servicePath;
+		
+		return resultURL;
+	}
+	
 	/**
 	 * Sends GET request to url and returns string representation of response body
 	 * @param url to send GET request

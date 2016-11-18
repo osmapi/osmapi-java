@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>pl.execon</groupId>
   <artifactId>java-osmapi</artifactId>
-  <version>1.0.0-RELEASE</version>
+  <version>1.2.0-RELEASE</version>
   <name>java-osmapi</name>
   <description>Java version of OSM API client libraries</description>
   <properties>

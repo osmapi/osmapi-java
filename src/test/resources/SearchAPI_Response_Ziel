@@ -1,344 +1,215 @@
-[
-    {
-        "address": "Zielona Góra Polska Zielona Góra ",
-        "lon": 15.504568,
-        "lat": 51.938293,
-        "type": "C"
-    },
-    {
-        "address": "Łężyca Polska Zielona Góra ",
-        "lon": 15.476645,
-        "lat": 51.994514,
-        "type": "C"
-    },
-    {
-        "address": "Raculka Polska Zielona Góra ",
-        "lon": 15.549032,
-        "lat": 51.930153,
-        "type": "C"
-    },
-    {
-        "address": "Drzonków Polska Zielona Góra ",
-        "lon": 15.571174,
-        "lat": 51.8946,
-        "type": "C"
-    },
-    {
-        "address": "Jędrzychów Polska Zielona Góra ",
-        "lon": 15.501937,
-        "lat": 51.902153,
-        "type": "C"
-    },
-    {
-        "address": "Jeleniów Polska powiat zielonogórski ",
-        "lon": 15.462751,
-        "lat": 51.849007,
-        "type": "C"
-    },
-    {
-        "address": "Ochla Polska powiat zielonogórski ",
-        "lon": 15.467767,
-        "lat": 51.878368,
-        "type": "C"
-    },
-    {
-        "address": "Przylep Polska Zielona Góra ",
-        "lon": 15.450978,
-        "lat": 51.968807,
-        "type": "C"
-    },
-    {
-        "address": "Racula Polska Zielona Góra ",
-        "lon": 15.564535,
-        "lat": 51.912582,
-        "type": "C"
-    },
-    {
-        "address": "Chynów Polska Zielona Góra ",
-        "lon": 15.535063,
-        "lat": 51.968773,
-        "type": "C"
-    },
-    {
-        "address": "Jany Polska Zielona Góra ",
-        "lon": 15.609959,
-        "lat": 51.973022,
-        "type": "C"
-    },
-    {
-        "address": "Ługowo Polska Zielona Góra ",
-        "lon": 15.623207,
-        "lat": 51.901226,
-        "type": "C"
-    },
-    {
-        "address": "Jarogniewice Polska Zielona Góra ",
-        "lon": 15.493154,
-        "lat": 51.832439,
-        "type": "C"
-    },
-    {
-        "address": "Kiełpin Polska Zielona Góra ",
-        "lon": 15.508575,
-        "lat": 51.866421,
-        "type": "C"
-    },
-    {
-        "address": "Zawada Polska Zielona Góra ",
-        "lon": 15.562801,
-        "lat": 51.991211,
-        "type": "C"
-    },
-    {
-        "address": "Krępa Polska Zielona Góra ",
-        "lon": 15.53862,
-        "lat": 52.000858,
-        "type": "C"
-    },
-    {
-        "address": "Zielona Polska Dąbrowa Górnicza ",
-        "lon": 19.186171,
-        "lat": 50.345295,
-        "type": "C"
-    },
-    {
-        "address": "Zielona Polska województwo Śląskie ",
-        "lon": 19.163568,
-        "lat": 50.339943,
-        "type": "C"
-    },
-    {
-        "address": "Zielone Wzgórza Polska powiat białostocki ",
-        "lon": 23.103333,
-        "lat": 53.121944,
-        "type": "C"
-    },
-    {
-        "address": "Rondo Stefana Batorego Polska Zielona Góra ",
-        "lon": 15.495996,
-        "lat": 51.961803,
-        "type": "S"
-    },
-    {
-        "address": "Księcia Józefa Poniatowskiego Polska powiat zielonogórski ",
-        "lon": 15.915486,
-        "lat": 52.0914,
-        "type": "S"
-    },
-    {
-        "address": "Zielonogórska Polska gmina Żary ",
-        "lon": 15.177787,
-        "lat": 51.718319,
-        "type": "S"
-    },
-    {
-        "address": "trasa Północna Polska Zielona Góra ",
-        "lon": 15.549539,
-        "lat": 51.955666,
-        "type": "S"
-    },
-    {
-        "address": "Zielonogórska Polska gmina Dąbie ",
-        "lon": 15.268018,
-        "lat": 51.986443,
-        "type": "S"
-    },
-    {
-        "address": "Zielonogórska Polska Grodzisk Wielkopolski ",
-        "lon": 16.369564,
-        "lat": 52.220413,
-        "type": "S"
-    },
-    {
-        "address": "Rondo Rady Europy Polska Zielona Góra ",
-        "lon": 15.524394,
-        "lat": 51.958244,
-        "type": "S"
-    },
-    {
-        "address": "Zielonogórska Polska Lubin ",
-        "lon": 16.19289,
-        "lat": 51.412582,
-        "type": "S"
-    },
-    {
-        "address": "Tadeusza Kościuszki Polska gmina Dąbrowa Zielona ",
-        "lon": 19.57729,
-        "lat": 50.898777,
-        "type": "S"
-    },
-    {
-        "address": "Rondo Jana Pawła II Polska Zielona Góra ",
-        "lon": 15.48346,
-        "lat": 51.93306,
-        "type": "S"
-    },
-    {
-        "address": "Odrzańska Polska Zielona Góra ",
-        "lon": 15.478725,
-        "lat": 51.991707,
-        "type": "S"
-    },
-    {
-        "address": "Olimpijska Polska Zielona Góra ",
-        "lon": 15.569306,
-        "lat": 51.893852,
-        "type": "S"
-    },
-    {
-        "address": "Pocztowa Polska Zielona Góra ",
-        "lon": 15.583518,
-        "lat": 51.932571,
-        "type": "S"
-    },
-    {
-        "address": "6 Dywizji Piechoty Polska Zieleniewo ",
-        "lon": 15.561179,
-        "lat": 54.150551,
-        "type": "S"
-    },
-    {
-        "address": "Zielona Polska Puławy ",
-        "lon": 21.969339,
-        "lat": 51.413956,
-        "type": "S"
-    },
-    {
-        "address": "Aleja Marii Danilewicz Zielińskiej Polska gmina Aleksandrów Kujawski ",
-        "lon": 18.736391,
-        "lat": 52.865692,
-        "type": "S"
-    },
-    {
-        "address": "Aleja Marii Danilewicz Zielińskiej Polska Aleksandrów Kujawski ",
-        "lon": 18.713264,
-        "lat": 52.866676,
-        "type": "S"
-    },
-    {
-        "address": "Długa Polska Zielona Góra ",
-        "lon": 15.498613,
-        "lat": 51.935879,
-        "type": "S"
-    },
-    {
-        "address": "Krakowskie Przedmieście Polska Zielonki ",
-        "lon": 19.919821,
-        "lat": 50.124817,
-        "type": "S"
-    },
-    {
-        "address": "Zieleniec Szosa Bydgoska 26 Polska Toruń ",
-        "lon": 18.563717,
-        "lat": 53.012314,
-        "type": "P"
-    },
-    {
-        "address": "Marantess Dolna 2A Polska Zielonka ",
-        "lon": 21.134691,
-        "lat": 52.311573,
-        "type": "P"
-    },
-    {
-        "address": "Zielarnia Medyczna \"Arnika\" Osiedle Dąbrowszczaków 8/8 Polska Swarzędz ",
-        "lon": 17.079174,
-        "lat": 52.414383,
-        "type": "P"
-    },
-    {
-        "address": "Emiś Wolności 9A Polska Zielonka ",
-        "lon": 21.15881,
-        "lat": 52.315636,
-        "type": "P"
-    },
-    {
-        "address": "Kordent Lipowa 6 Polska Zielonka ",
-        "lon": 21.15473,
-        "lat": 52.313755,
-        "type": "P"
-    },
-    {
-        "address": "IGLOTECHNIK Sp. z o.o. Osiedle pomorskie 29 Polska Zielona Góra ",
-        "lon": 15.552225,
-        "lat": 51.933681,
-        "type": "P"
-    },
-    {
-        "address": "Zielonogórskie Centrum Pomocy Rodzinie Długa 13 Polska Zielona Góra ",
-        "lon": 15.497292,
-        "lat": 51.936409,
-        "type": "P"
-    },
-    {
-        "address": "Ruben Hotel Aleja Konstytucji 3 Maja 1a Polska Zielona Góra ",
-        "lon": 15.502277,
-        "lat": 51.935966,
-        "type": "P"
-    },
-    {
-        "address": "Zielonogórski Ośrodek Kultury Festiwalowa 3 Polska Zielona Góra ",
-        "lon": 15.491285,
-        "lat": 51.925617,
-        "type": "P"
-    },
-    {
-        "address": "Lewaitan Partner Zielonogórska 44 Polska Urzuty ",
-        "lon": 15.413337,
-        "lat": 51.789417,
-        "type": "P"
-    },
-    {
-        "address": "ADB Polska Sp. z o.o. Trasa Północna 16 Polska Zielona Góra ",
-        "lon": 15.506189,
-        "lat": 51.961437,
-        "type": "P"
-    },
-    {
-        "address": "Figaro Aleja Zieleniecka 2 Polska Warszawa ",
-        "lon": 21.055817,
-        "lat": 52.239765,
-        "type": "P"
-    },
-    {
-        "address": "Wulkamyj Foluszowa 112c Polska Zielona Góra ",
-        "lon": 15.459239,
-        "lat": 51.956482,
-        "type": "P"
-    },
-    {
-        "address": "Rejonowe Przedsiębiorstwo Zieleni Sandomierska 249 Polska Kielce ",
-        "lon": 20.675671,
-        "lat": 50.864483,
-        "type": "P"
-    },
-    {
-        "address": "Gezet Sulechowska 26A Polska Zielona Góra ",
-        "lon": 15.521218,
-        "lat": 51.954399,
-        "type": "P"
-    },
-    {
-        "address": "UNIKATONIA Concept Spa & Wellness Zielonogórska 1 Polska Lubin ",
-        "lon": 16.226252,
-        "lat": 51.381153,
-        "type": "P"
-    },
-    {
-        "address": "Lumel S.A. Sulechowska 1 Polska Zielona Góra ",
-        "lon": 15.515752,
-        "lat": 51.946316,
-        "type": "P"
-    },
-    {
-        "address": "Satmania Piwna 3a Polska Zielona Góra ",
-        "lon": 15.508657,
-        "lat": 51.927658,
-        "type": "P"
-    },
-    {
-        "address": "Florian. usługi kominiarskie Zielona 15 Polska Oborniki Śląskie ",
-        "lon": 16.908859,
-        "lat": 51.305199,
-        "type": "P"
-    }
-]
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    21.402143,
+                    52.175007
+                ]
+            },
+            "properties": {
+                "type": "C",
+                "name": "Zielone Górki gmina Dębe Wielkie powiat miński ",
+                "externalId": 2218688217
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    21.158062,
+                    52.307083
+                ]
+            },
+            "properties": {
+                "type": "C",
+                "name": "Zielonka 05-220 powiat wołomiński ",
+                "externalId": 1854937257
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    20.849216,
+                    52.935139
+                ]
+            },
+            "properties": {
+                "type": "C",
+                "name": "Zielona 06-405 gmina Krasne powiat przasnyski ",
+                "externalId": 1858743082
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    20.541134,
+                    52.7164
+                ]
+            },
+            "properties": {
+                "type": "C",
+                "name": "Zielona 06-456 gmina Ojrzeń powiat ciechanowski ",
+                "externalId": 1877166235
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    19.975803,
+                    53.091591
+                ]
+            },
+            "properties": {
+                "type": "C",
+                "name": "Zielona 09-310 gmina Kuczbork-Osada powiat żuromiński ",
+                "externalId": 1854937254
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    20.804653,
+                    52.253605
+                ]
+            },
+            "properties": {
+                "type": "C",
+                "name": "Zielonki-Wieś 05-082 Zielonki Wieś gmina Stare Babice powiat warszawski zachodni ",
+                "externalId": 692623273
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    20.822271,
+                    52.248402
+                ]
+            },
+            "properties": {
+                "type": "C",
+                "name": "Zielonki-Parcela Zielonki Parcela gmina Stare Babice powiat warszawski zachodni ",
+                "externalId": 334627846
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    22.165556,
+                    52.779999
+                ]
+            },
+            "properties": {
+                "type": "C",
+                "name": "Świerże Zielone 07-323 gmina Zaręby Kościelne powiat ostrowski ",
+                "externalId": 3009680387
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    20.138056,
+                    52.911945
+                ]
+            },
+            "properties": {
+                "type": "C",
+                "name": "Zieluminek 06-540 gmina Radzanów powiat mławski ",
+                "externalId": 3009680228
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    21.820568,
+                    51.641842
+                ]
+            },
+            "properties": {
+                "type": "C",
+                "name": "Zielonka 08-540 Zielonka ",
+                "externalId": 1911966421
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    20.820059,
+                    52.251911
+                ]
+            },
+            "properties": {
+                "type": "S",
+                "name": "Warszawska Zielonki Parcela gmina Stare Babice powiat warszawski zachodni ",
+                "externalId": 258507503
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    20.801542,
+                    52.253578
+                ]
+            },
+            "properties": {
+                "type": "S",
+                "name": "Warszawska Zielonki Wieś gmina Stare Babice powiat warszawski zachodni ",
+                "externalId": 302956327
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    21.068508,
+                    51.94986
+                ]
+            },
+            "properties": {
+                "type": "S",
+                "name": "Zielonych Sosen Ławki ",
+                "externalId": 173832694
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    20.870636,
+                    52.808334
+                ]
+            },
+            "properties": {
+                "type": "S",
+                "name": "Zielińskiego gmina Gołymin-Ośrodek powiat ciechanowski ",
+                "externalId": 39722887
+            }
+        }
+    ]
+}

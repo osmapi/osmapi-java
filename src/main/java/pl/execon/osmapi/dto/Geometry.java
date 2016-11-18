@@ -1,5 +1,7 @@
 package pl.execon.osmapi.dto;
 
+import java.util.Arrays;
+
 public class Geometry {
 	private String type;
 	private double[][] coordinates;
@@ -15,6 +17,13 @@ public class Geometry {
 	}
 	public void setCoordinates(double[][] coordinates) {
 		this.coordinates = coordinates;
+	}
+	@Override
+	public String toString() {
+		return "Geometry ["
+				+ (type != null ? "type=" + type + ", " : "")
+				+ (coordinates != null ? "coordinates="
+						+ Arrays.toString(coordinates) : "") + "]";
 	}
 	
 	

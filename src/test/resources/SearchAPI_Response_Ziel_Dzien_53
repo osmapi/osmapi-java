@@ -1,38 +1,95 @@
-[
-    {
-        "address": "Dziennikarska 53E Polska Zielonka ",
-        "lon": 21.166166,
-        "lat": 52.310867,
-        "type": "N"
-    },
-    {
-        "address": "Dziennikarska 53c Polska Zielonka ",
-        "lon": 21.166027,
-        "lat": 52.310585,
-        "type": "N"
-    },
-    {
-        "address": "Dziennikarska 53b Polska Zielonka ",
-        "lon": 21.16614,
-        "lat": 52.31052,
-        "type": "N"
-    },
-    {
-        "address": "Dziennikarska 53d Polska Zielonka ",
-        "lon": 21.166241,
-        "lat": 52.310661,
-        "type": "N"
-    },
-    {
-        "address": "Dziennikarska 53a Polska Zielonka ",
-        "lon": 21.16589,
-        "lat": 52.310101,
-        "type": "N"
-    },
-    {
-        "address": "Dziennikarska 53 Polska Zielonka ",
-        "lon": 21.165689,
-        "lat": 52.310326,
-        "type": "N"
-    }
-]
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    21.166166,
+                    52.310867
+                ]
+            },
+            "properties": {
+                "type": "SN",
+                "name": "Dziennikarska 53E 05-220 powiat wołomiński ",
+                "externalId": 117393543
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    21.166241,
+                    52.310661
+                ]
+            },
+            "properties": {
+                "type": "SN",
+                "name": "Dziennikarska 53D 05-220 powiat wołomiński ",
+                "externalId": 2186661742
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    21.166027,
+                    52.310585
+                ]
+            },
+            "properties": {
+                "type": "SN",
+                "name": "Dziennikarska 53C 05-220 powiat wołomiński ",
+                "externalId": 117404281
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    21.16614,
+                    52.31052
+                ]
+            },
+            "properties": {
+                "type": "SN",
+                "name": "Dziennikarska 53B 05-220 powiat wołomiński ",
+                "externalId": 117404287
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    21.165863,
+                    52.31028
+                ]
+            },
+            "properties": {
+                "type": "SN",
+                "name": "Dziennikarska 53 05-220 powiat wołomiński ",
+                "externalId": 117394902
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    21.16589,
+                    52.310101
+                ]
+            },
+            "properties": {
+                "type": "SN",
+                "name": "Dziennikarska 53A 05-220 powiat wołomiński ",
+                "externalId": 2186661738
+            }
+        }
+    ]
+}

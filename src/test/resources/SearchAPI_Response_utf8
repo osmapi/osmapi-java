@@ -1,14 +1,215 @@
-[
+{
+  "type": "FeatureCollection",
+  "features": [
     {
-        "address": "Wolności Polska Ząbki ",
-        "lon": 21.089792,
-        "lat": 52.302975,
-        "type": "S"
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.095385,
+          52.299614
+        ]
+      },
+      "properties": {
+        "type": "S",
+        "name": "Wolności Ząbki powiat wołomiński ",
+        "externalId": 117916509
+      }
     },
     {
-        "address": "Makro Cash & Carry Wolności 50 Polska Ząbki ",
-        "lon": 21.094063,
-        "lat": 52.303745,
-        "type": "P"
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.093906,
+          52.303188
+        ]
+      },
+      "properties": {
+        "type": "P",
+        "name": "Makro Cash & Carry Wolności 50 05-091 Ząbki powiat wołomiński ",
+        "externalId": 257348882
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.094749,
+          52.301491
+        ]
+      },
+      "properties": {
+        "type": "SN",
+        "name": "Wolności 48G 05-091 Ząbki powiat wołomiński ",
+        "externalId": 2179328028
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0949,
+          52.301289
+        ]
+      },
+      "properties": {
+        "type": "SN",
+        "name": "Wolności 48e 05-091 Ząbki powiat wołomiński ",
+        "externalId": 2179328024
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.095367,
+          52.300106
+        ]
+      },
+      "properties": {
+        "type": "SN",
+        "name": "Wolności 44C 05-091 Ząbki powiat wołomiński ",
+        "externalId": 309268779
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.09491,
+          52.30122
+        ]
+      },
+      "properties": {
+        "type": "SN",
+        "name": "Wolności 48D 05-091 Ząbki powiat wołomiński ",
+        "externalId": 2179328018
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.093933,
+          52.300129
+        ]
+      },
+      "properties": {
+        "type": "SN",
+        "name": "Wolności 127 Ząbki powiat wołomiński ",
+        "externalId": 375982303
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.095394,
+          52.300041
+        ]
+      },
+      "properties": {
+        "type": "SN",
+        "name": "Wolności 44B 05-091 Ząbki powiat wołomiński ",
+        "externalId": 309268778
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.09494,
+          52.30109
+        ]
+      },
+      "properties": {
+        "type": "SN",
+        "name": "Wolności 48c Ząbki powiat wołomiński ",
+        "externalId": 2179328017
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.093662,
+          52.300087
+        ]
+      },
+      "properties": {
+        "type": "SN",
+        "name": "Wolności 123 Ząbki powiat wołomiński ",
+        "externalId": 375982297
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.09606,
+          52.29874
+        ]
+      },
+      "properties": {
+        "type": "SN",
+        "name": "Wolności 38A 05-091 Ząbki powiat wołomiński ",
+        "externalId": 2179325813
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.093395,
+          52.299759
+        ]
+      },
+      "properties": {
+        "type": "SN",
+        "name": "Wolności 111 05-091 Ząbki powiat wołomiński ",
+        "externalId": 3819628711
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.09433,
+          52.300003
+        ]
+      },
+      "properties": {
+        "type": "SN",
+        "name": "Wolności 91 05-091 Ząbki powiat wołomiński ",
+        "externalId": 355186020
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.094742,
+          52.300259
+        ]
+      },
+      "properties": {
+        "type": "SN",
+        "name": "Wolności 137 Ząbki powiat wołomiński ",
+        "externalId": 293444132
+      }
     }
-]
+  ]
+}

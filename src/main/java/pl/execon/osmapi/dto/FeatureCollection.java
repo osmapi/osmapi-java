@@ -1,5 +1,7 @@
 package pl.execon.osmapi.dto;
 
+import java.util.Arrays;
+
 public class FeatureCollection {
 	private String type;
 	Feature[] features;
@@ -15,6 +17,14 @@ public class FeatureCollection {
 	public void setFeatures(Feature[] features) {
 		this.features = features;
 	}
+	@Override
+	public String toString() {
+		return "FeatureCollection ["
+				+ (type != null ? "type=" + type + ", " : "")
+				+ (features != null ? "features=" + Arrays.toString(features)
+						: "") + "]";
+	}
+	
 	
 	
 }

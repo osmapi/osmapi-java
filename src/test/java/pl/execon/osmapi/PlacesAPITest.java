@@ -60,15 +60,15 @@ public class PlacesAPITest {
 		assertEquals("Coordinates array size mismatch", 5,results.getFeatures()[3].getGeometry().getCoordinates().length);
 	}	
 	
-	@Test
-	public void simplePlacesQueryOnline(){		
-		
-		PlacesAPIQuery query = QueryFactory.createPlacesQuery(53.22054,21.87315);
-		FeatureCollection results = placesAPIOnline.queryPlace(query);
-		assertEquals("Single geometry latitude mismatch", 53.220543, results.getFeatures()[0].getGeometry().getCoordinates()[0][0],0.00001);
-		assertEquals("Single geometry latitude mismatch", 21.873286, results.getFeatures()[0].getGeometry().getCoordinates()[0][1],0.00001);
-		assertEquals("Coordinates array size mismatch", 5,results.getFeatures()[3].getGeometry().getCoordinates().length);
-	}
+//	@Test
+//	public void simplePlacesQueryOnline(){		
+//		
+//		PlacesAPIQuery query = QueryFactory.createPlacesQuery(53.22054,21.87315);
+//		FeatureCollection results = placesAPIOnline.queryPlace(query);
+//		assertEquals("Single geometry latitude mismatch", 53.220543, results.getFeatures()[0].getGeometry().getCoordinates()[0][0],0.00001);
+//		assertEquals("Single geometry latitude mismatch", 21.873286, results.getFeatures()[0].getGeometry().getCoordinates()[0][1],0.00001);
+//		assertEquals("Coordinates array size mismatch", 5,results.getFeatures()[3].getGeometry().getCoordinates().length);
+//	}
 	
 	
 	@Test
@@ -80,14 +80,14 @@ public class PlacesAPITest {
 		assertTrue("Type mismatch:", results.getFeatures()[results.getFeatures().length-1].getProperties().getMatchType().equalsIgnoreCase("exact"));		
 	}	
 	
-	@Test
-	public void boxPlacesQueryOnline(){
-		PlacesAPIQuery query = QueryFactory.createPlacesQuery(52.22733,21.00427, 52.22815,21.00539);
-		FeatureCollection results = placesAPIOnline.queryPlace(query);
-		assertTrue("Features list is empty:", results.getFeatures().length>1);
-		assertTrue("Type mismatch:", results.getFeatures()[0].getProperties().getMatchType().equalsIgnoreCase("exact"));
-		assertTrue("Type mismatch:", results.getFeatures()[results.getFeatures().length-1].getProperties().getMatchType().equalsIgnoreCase("exact"));		
-	}
+//	@Test
+//	public void boxPlacesQueryOnline(){
+//		PlacesAPIQuery query = QueryFactory.createPlacesQuery(52.22733,21.00427, 52.22815,21.00539);
+//		FeatureCollection results = placesAPIOnline.queryPlace(query);
+//		assertTrue("Features list is empty:", results.getFeatures().length>1);
+//		assertTrue("Type mismatch:", results.getFeatures()[0].getProperties().getMatchType().equalsIgnoreCase("exact"));
+//		assertTrue("Type mismatch:", results.getFeatures()[results.getFeatures().length-1].getProperties().getMatchType().equalsIgnoreCase("exact"));		
+//	}
 	
 	@Test
 	public void featureImageQuery(){
@@ -112,18 +112,18 @@ public class PlacesAPITest {
 				
 	}
 	
-	@Test
-	public void featureImageQueryOnline(){
-		PlacesAPIQuery query = QueryFactory.createPlacesQuery(53.22054,21.87315);
-		FeatureCollection results = placesAPI.queryPlace(query);
-		
-		Feature feature = results.getFeatures()[0];
-		feature.getProperties().setDetailsLink("http://www.natemat.pl");
-		FeatureImage image = placesAPIOnline.imageForFeature(feature);
-		assertNotNull(image);
-		assertEquals("Width mismatch", 300,image.getWidth());
-		assertEquals("Height mismatch", 225,image.getHeight());
-		assertEquals("Content type mismatch", "image/png",image.getContentType());
-		assertTrue("Size mismatch", image.getImageBytes().length>10000);		
-	}
+//	@Test
+//	public void featureImageQueryOnline(){
+//		PlacesAPIQuery query = QueryFactory.createPlacesQuery(53.22054,21.87315);
+//		FeatureCollection results = placesAPI.queryPlace(query);
+//		
+//		Feature feature = results.getFeatures()[0];
+//		feature.getProperties().setDetailsLink("http://www.natemat.pl");
+//		FeatureImage image = placesAPIOnline.imageForFeature(feature);
+//		assertNotNull(image);
+//		assertEquals("Width mismatch", 300,image.getWidth());
+//		assertEquals("Height mismatch", 225,image.getHeight());
+//		assertEquals("Content type mismatch", "image/png",image.getContentType());
+//		assertTrue("Size mismatch", image.getImageBytes().length>10000);		
+//	}
 }
